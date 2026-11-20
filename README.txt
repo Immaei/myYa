@@ -1,9 +1,7 @@
-PharmaCloud Sidebar Update
+PharmaCloud Sidebar Redesign
 
-อัปโหลด dashboard.html และ index.html ไปยัง root ของ GitHub myYa เพื่อแทนไฟล์เดิม จากนั้น Commit changes และรอ Vercel Ready
+อัปโหลด dashboard.html และ index.html ใน GitHub repo myYa branch main เพื่อแทนไฟล์ชื่อเดิม
 
-ทั้งสองไฟล์เป็น Dashboard เดิมที่เพิ่ม Sidebar POS -> pos.html, Admin -> admin.html, Status -> status.html เท่านั้น
+เปลี่ยน Sidebar อย่างเดียว: POS เป็นปุ่มเด่น, จัดกลุ่มงานคลังยา/งานจ่ายยา/งานผู้ดูแล, รองรับแท็บเล็ต/มือถือ
 
-ไม่ได้เปลี่ยน API, logic, กราฟ, KPI, CSS เดิม หรือไฟล์ pos.html/admin.html/status.html
-
-หมายเหตุ: index.html แบบนี้ไม่ใช่หน้าปุ่มสี่ปุ่มตามโจทย์ index.html ของอาจารย์โดยตรง และอาจไม่ตรงข้อกำหนดธีมดำของอาจารย์
+ไม่เปลี่ยนกราฟ ตาราง ฟิลเตอร์ โค้ดเรียก API หรือ logic ข้อมูล ไม่ต้องเปลี่ยน pos.html admin.html status.html หรือ api/

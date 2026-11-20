@@ -15,6 +15,24 @@
 @media(max-width:900px){.sidebar{width:75px;flex-basis:75px;padding:21px 9px}.brand{justify-content:center;padding:0 0 23px}.brand .brand-copy,.nav-head,.nav .nav-label,.nav .external,.side-bottom,.sidebar-foot{display:none}.nav button,.nav a{justify-content:center;padding:13px}.content{width:calc(100% - 75px);padding:22px}.topbar{flex-wrap:wrap}.top-actions{justify-content:flex-start}.hero svg{opacity:.45}}
 @media(max-width:630px){.sidebar{width:260px;flex-basis:260px;position:fixed;transform:translateX(-106%);transition:.25s;padding:27px 16px 18px;box-shadow:15px 0 40px #124b7130}.sidebar.open{transform:translateX(0)}.sidebar .brand-copy,.sidebar .nav-head,.sidebar .nav .nav-label,.sidebar .nav .external,.sidebar .side-bottom,.sidebar .sidebar-foot{display:block}.sidebar .brand{justify-content:flex-start}.sidebar .nav button,.sidebar .nav a{justify-content:flex-start}.mobile-backdrop.show{display:block;position:fixed;inset:0;background:#1f52635e;z-index:11}.mobile-toggle{display:inline-flex}.content{width:100%;padding:15px 13px 45px}.topbar{align-items:flex-start}.top-actions{width:100%}.search-global{flex:1;min-width:0}.search-global input{width:100%}.hero{padding:22px;min-height:155px}.hero svg{width:190px;opacity:.18}.hero h2{font-size:20px}.hero p{font-size:11px}.kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.kpi{min-height:129px;padding:14px 12px}.kpi-value{font-size:29px}.kpi:last-child{grid-column:span 2}.panel{padding:16px}.source-strip{gap:5px}.source-tile{padding:7px 8px}.toolbar input[type=search]{flex-basis:100%;min-width:0}.toolbar select{flex:1}.donut-flex{gap:15px}.donut{width:150px;height:150px}.donut-hole{inset:28px}.detail-grid{grid-template-columns:1fr}.modal{padding:19px}.date-wrap{width:100%}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* PharmaCloud: pharmacy-first sidebar, matching the original blue and cream UI */
+.sidebar{overflow-y:auto;scrollbar-width:thin;scrollbar-color:#c8dfeb transparent;padding-top:20px}
+.brand{padding-bottom:18px}
+.side-action{margin:1px 1px 23px}
+.pos-feature{display:flex;align-items:center;gap:10px;min-height:76px;padding:13px 12px;border-radius:18px;background:linear-gradient(125deg,#269dd8,#267dbf);border:1px solid #298cc9;color:#fff;box-shadow:0 10px 22px #207caf30;transition:transform .2s,box-shadow .2s}
+.pos-feature:hover{color:#fff;transform:translateY(-2px);box-shadow:0 13px 25px #207caf40;background:linear-gradient(125deg,#1e94d1,#1a73b6)}
+.pos-feature-icon{width:38px;height:38px;flex:0 0 38px;border-radius:13px;background:#ffffff29;display:grid;place-items:center;font-size:21px}
+.pos-feature-copy{min-width:0;flex:1}.pos-feature-copy strong{display:block;font-size:13px;font-weight:600;color:#fff;white-space:nowrap}.pos-feature-copy small{display:block;font-size:10px;color:#e1f4ff;white-space:nowrap}
+.pos-feature-go{font-size:24px;opacity:.85;line-height:1}
+.nav-section-label{letter-spacing:.4px;text-transform:none;font-size:10px;font-weight:600;color:#82a0b5;margin:0 12px 8px}
+.nav-section-spaced{margin-top:19px;padding-top:17px;border-top:1px solid #d7e8f2}
+.nav{gap:3px}.nav button,.nav a{min-height:43px;padding:10px 11px;gap:11px;font-size:12px}
+.nav .nav-label{flex:1;min-width:0}.nav-tag{font-size:9px;color:#4d90b9;background:#dff0fb;border-radius:7px;padding:3px 6px}
+.side-bottom{margin-top:20px}.side-card{padding:11px 12px}.sidebar-foot{margin-top:10px}
+@media (min-width:901px) and (max-height:760px){.sidebar{padding-top:13px}.brand{padding-bottom:11px}.side-action{margin-bottom:14px}.nav-section-spaced{margin-top:11px;padding-top:10px}.side-bottom{margin-top:10px}.side-card p{display:none}}
+@media (min-width:631px) and (max-width:900px){.sidebar{overflow-x:hidden}.side-action{margin:0 0 14px}.pos-feature{min-height:51px;padding:7px;justify-content:center;border-radius:13px}.pos-feature-icon{height:35px;width:35px;flex-basis:35px}.pos-feature-copy,.pos-feature-go,.nav-tag{display:none}.nav-section-spaced{padding-top:9px;margin-top:9px}.nav-section-label{font-size:0;margin:0 0 7px}.nav .nav-label{display:none}}
+@media(max-width:630px){.sidebar{overflow-y:auto}.side-action{margin-bottom:19px}.pos-feature{min-height:76px}.pos-feature-copy,.pos-feature-go,.nav-tag{display:block}.nav-section-label{font-size:10px;margin:0 12px 8px}.nav .nav-label{display:block}}
 </style>
 </head>
 <body>
@@ -23,20 +41,26 @@
 <div class="shell">
 <aside class="sidebar" id="sidebar" aria-label="เมนูหลัก">
   <div class="brand"><div class="brand-icon" aria-hidden="true"><svg viewBox="0 0 40 40" width="28" height="28"><g transform="rotate(-35 20 20)"><rect x="8" y="14" width="24" height="12" rx="6" fill="none" stroke="white" stroke-width="3"/><path d="M20 14v12" stroke="white" stroke-width="3"/></g></svg></div><div class="brand-copy"><strong>PharmaCloud</strong><small>PHARMACY OPERATIONS</small></div></div>
-  <div class="nav-head">WORKSPACE</div>
-  <nav class="nav" id="nav">
+  <div class="side-action"><a class="pos-feature" href="pos.html" aria-label="เปิดหน้าขายยา POS"><span class="pos-feature-icon" aria-hidden="true">💊</span><span class="pos-feature-copy"><strong>เริ่มขายยา</strong><small>POS · บันทึกการจ่ายยา</small></span><span class="pos-feature-go" aria-hidden="true">›</span></a></div>
+  <div class="nav-head nav-section-label">ภาพรวมและคลังยา</div>
+  <nav class="nav" id="nav" aria-label="งานคลังยา">
     <button type="button" data-nav="overview" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg><span class="nav-label">Overview · ภาพรวม</span></button>
     <button type="button" data-nav="inventory"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="M3 10h18M9 5v15"/></svg><span class="nav-label">Inventory · คลังยา</span></button>
     <button type="button" data-nav="expiry"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span class="nav-label">Expiry Monitoring</span></button>
     <button type="button" data-nav="reorder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8l9-5 9 5v10l-9 5-9-5V8zM3 8l9 6 9-6M12 14v9"/></svg><span class="nav-label">Reorder Management</span></button>
+  </nav>
+  <div class="nav-head nav-section-label nav-section-spaced">งานจ่ายยาและทะเบียนยา</div>
+  <nav class="nav" aria-label="ข้อมูลยาและการจ่ายยา">
     <button type="button" data-nav="dispensing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg><span class="nav-label">Dispensing History</span></button>
     <a href="drug_dashboard.html" title="เปิด Drug Dashboard เดิม"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 15l4-5 3 3 3-5"/></svg><span class="nav-label">Drug Dashboard</span><span class="external">↗</span></a>
-    <a href="pos.html" title="เปิดหน้าขายยา POS"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="M7 10h10M7 14h4M15 14h2"/></svg><span class="nav-label">POS · หน้าขายยา</span><span class="external">↗</span></a>
-    <a href="admin.html" title="เปิดหน้าจัดการระบบสำหรับผู้ดูแล"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3"/><path d="M5 21v-3a7 7 0 0 1 14 0v3M19 4l2 2-2 2"/></svg><span class="nav-label">Admin · จัดการระบบ</span><span class="external">↗</span></a>
-    <a href="status.html" title="เปิดหน้าตรวจสถานะระบบ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h4l3-6 4 12 3-6h4"/></svg><span class="nav-label">Status · ตรวจระบบ</span><span class="external">↗</span></a>
   </nav>
-  <div class="side-bottom"><div class="side-card"><strong>☁️ Pharmacy workspace</strong><p>แสดงข้อมูลตามไฟล์ JSON ที่โหลดล่าสุด ระบบนี้ไม่เชื่อมต่อสต็อกหรือคำสั่งซื้อแบบเรียลไทม์</p></div></div>
-  <div class="sidebar-foot">PharmaCloud · Local Dashboard</div>
+  <div class="nav-head nav-section-label nav-section-spaced">ตั้งค่าและตรวจสอบ</div>
+  <nav class="nav" aria-label="งานผู้ดูแลระบบ">
+    <a href="admin.html" title="จัดการข้อมูลระบบสำหรับผู้ดูแล"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3"/><path d="M5 21v-3a7 7 0 0 1 14 0v3"/></svg><span class="nav-label">จัดการระบบ</span><span class="nav-tag">Admin</span></a>
+    <a href="status.html" title="ตรวจสถานะการเชื่อมต่อระบบ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h4l3-6 4 12 3-6h4"/></svg><span class="nav-label">สถานะระบบ</span></a>
+  </nav>
+  <div class="side-bottom"><div class="side-card"><strong>☁️ Pharmacy workspace</strong><p>ข้อมูลคลังยามาจาก API หรือไฟล์สำรองตามสถานะที่แสดงบนหน้าจอ</p></div></div>
+  <div class="sidebar-foot">PharmaCloud · Pharmacy Workspace</div>
 </aside>
 <main class="content">
   <div class="topbar">
