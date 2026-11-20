@@ -1,1 +1,9 @@
-myYa PharmaCloud Theme\n\nอัปโหลด index.html, pos.html, admin.html ไปที่ root ของ GitHub repository myYa ผ่าน Add file > Upload files แล้ว Commit changes รอ Vercel Ready\n\nหาก GitHub แจ้งชื่อซ้ำ ให้อัปโหลดเพื่อแทนที่ไฟล์เดิม ไม่ต้องลบ api/, dashboard.html, drug_dashboard.html, status.html\n\nหน้า index.html ลิงก์ไป pos.html, admin.html, dashboard.html, status.html\nPOS/Admin ยังคงใช้ /api/data, /api/dispense, /api/admin ตามเดิม การกดจ่ายยาและแก้ไขข้อมูลส่งผลต่อฐานข้อมูลจำลองจริง\n\nปรับเฉพาะหน้าตา/สี CSS และกราฟิกหน้าแรก ไม่เปลี่ยน API หรือ logic ของ POS/Admin\n
+PharmaCloud Sidebar Update
+
+อัปโหลด dashboard.html และ index.html ไปยัง root ของ GitHub myYa เพื่อแทนไฟล์เดิม จากนั้น Commit changes และรอ Vercel Ready
+
+ทั้งสองไฟล์เป็น Dashboard เดิมที่เพิ่ม Sidebar POS -> pos.html, Admin -> admin.html, Status -> status.html เท่านั้น
+
+ไม่ได้เปลี่ยน API, logic, กราฟ, KPI, CSS เดิม หรือไฟล์ pos.html/admin.html/status.html
+
+หมายเหตุ: index.html แบบนี้ไม่ใช่หน้าปุ่มสี่ปุ่มตามโจทย์ index.html ของอาจารย์โดยตรง และอาจไม่ตรงข้อกำหนดธีมดำของอาจารย์
