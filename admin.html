@@ -225,7 +225,37 @@
   }
   .toast .x:focus-visible { outline: 3px solid var(--text); outline-offset: 2px; }
 </style>
-</head>
+<style id="pharmacloud-theme">
+:root{--bg:#f2f9ff;--card:#ffffff;--sub:#eff8ff;--line:#dceaf4;--hover:#eaf6ff;--border:#bcd9e9;--text:#183b55;--muted:#5f7c91;--green:#1699cf;--orange:#b77512;--gray:#8195a3;--red:#cf4b62;--shadow-card:0 10px 32px rgba(42,118,158,.10);--shadow-dialog:0 20px 60px rgba(24,59,85,.20)}
+html{color-scheme:light}
+body{background:linear-gradient(135deg,#e8f6ff 0%,#fffaf0 55%,#e9f7ff 100%) fixed!important;color:#183b55!important}
+header.top,header{background:rgba(255,255,255,.88)!important;border-color:#dceaf4!important}
+.panel,.card,dialog{background:#fff!important;border-color:#dceaf4!important;border-radius:22px!important;box-shadow:0 12px 34px rgba(42,118,158,.10)!important}
+h1,h2,h3{color:#174b70!important}
+.muted,.small,label,.count,.brand .sub,.cred-status,.hint{color:#5f7c91!important}
+input[type=text],input[type=password],input[type=number],input[type=date],input[type=search],select,textarea,input,select{background:#f5fbff!important;color:#183b55!important;border-color:#bcd9e9!important;color-scheme:light}
+input::placeholder,textarea::placeholder{color:#7792a5!important}
+.btn.primary,button:not(.secondary):not(.danger):not(.tab):not(.x){background:#179bd2!important;color:white!important}
+.btn.secondary,.secondary{background:#e9f6ff!important;color:#17678d!important;border-color:#c6e3f4!important}
+.btn.danger{color:#cf4b62!important;border-color:#cf4b62!important}
+.tab{background:#eff8ff!important;color:#51758c!important;border-color:#dceaf4!important}
+.tab[aria-selected=true]{background:#179bd2!important;color:white!important}
+thead th,th{background:#f0f8fd!important;color:#52758b!important}
+tbody td{border-color:#e2eef6!important;color:#264d65!important}
+tbody tr:hover td{background:#f3faff!important}
+.table-wrap,table{border-color:#dceaf4!important}
+.lock-note,.banner,.notice{background:#fff7e4!important;color:#8a5b12!important;border-color:#f1d99e!important}
+.dlg-summary,.stock,.feedback,.asof{background:#eef8ff!important;color:#28556e!important;border-color:#dceaf4!important}
+.badge.b-active{color:#167a5b!important;background:#e9f8f0!important}
+.badge.b-quarantine{color:#986110!important;background:#fff4dc!important}
+.badge.b-written_off{color:#687b88!important;background:#f1f4f7!important}
+a{color:#147eaf}
+button,.btn,.tab{transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+button:hover:not(:disabled),.btn:hover:not(:disabled){box-shadow:0 5px 14px rgba(25,155,210,.16)}
+button:active:not(:disabled){transform:scale(.98)}
+:focus-visible{outline:3px solid #57b8e8!important;outline-offset:2px}
+@media(max-width:700px){.wrap{padding-left:14px!important;padding-right:14px!important}.panel{padding:14px!important}.tabs{overflow-x:auto}.tab{white-space:nowrap}.top-inner{padding:16px!important}}
+</style></head>
 <body>
 
 <header class="top">

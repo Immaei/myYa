@@ -1,14 +1,1 @@
-myYa — ไฟล์เพิ่มสำหรับ Repository เดิม
-
-อัปโหลด index.html, pos.html, admin.html ไปที่ root ของ Repository (ระดับเดียวกับ dashboard.html และ status.html)
-ห้ามลบหรือทับไฟล์ dashboard.html, drug_dashboard.html, status.html และโฟลเดอร์ api/
-
-ไฟล์ pos.html ใช้ GET /api/data และ POST /api/dispense
-ไฟล์ admin.html ใช้ GET /api/data และ POST /api/admin
-ไฟล์ index.html เชื่อมไปยัง pos.html, admin.html, dashboard.html และ status.html
-
-หลัง Commit ให้รอ Vercel Deploy สำเร็จ จากนั้นเปิด /index.html, /pos.html, /admin.html
-ไฟล์ README นี้ไม่จำเป็นต้องอัปโหลด
-
-การทดสอบขายจริงเปลี่ยนฐานข้อมูล Supabase ให้ใช้ข้อมูลจำลองและเตรียม reset ก่อน
-ถ้า API ใช้ rewrite หรือ authentication พิเศษ ต้องตรวจ deployment บน Vercel อีกครั้ง
+myYa PharmaCloud Theme\n\nอัปโหลด index.html, pos.html, admin.html ไปที่ root ของ GitHub repository myYa ผ่าน Add file > Upload files แล้ว Commit changes รอ Vercel Ready\n\nหาก GitHub แจ้งชื่อซ้ำ ให้อัปโหลดเพื่อแทนที่ไฟล์เดิม ไม่ต้องลบ api/, dashboard.html, drug_dashboard.html, status.html\n\nหน้า index.html ลิงก์ไป pos.html, admin.html, dashboard.html, status.html\nPOS/Admin ยังคงใช้ /api/data, /api/dispense, /api/admin ตามเดิม การกดจ่ายยาและแก้ไขข้อมูลส่งผลต่อฐานข้อมูลจำลองจริง\n\nปรับเฉพาะหน้าตา/สี CSS และกราฟิกหน้าแรก ไม่เปลี่ยน API หรือ logic ของ POS/Admin\n
